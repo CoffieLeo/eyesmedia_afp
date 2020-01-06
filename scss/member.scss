@@ -1,0 +1,18 @@
+@import "../style/module/reset";
+@import "../style/module/mixin";
+@import "../style/module/variable";
+@import "../style/module/global";
+
+.member-top-box{
+    background-color: $member-default;
+    .title-box{
+        .material-icons{
+            color: $default-white;
+        }
+    }
+    .member-info-box{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+    }
+}
