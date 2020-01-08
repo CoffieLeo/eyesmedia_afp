@@ -4,6 +4,7 @@
 @import "../style/module/global";
 
 .member-top-box{
+    position: relative;
     background-color: $member-default;
     .title-box{
         .material-icons{
@@ -12,7 +13,109 @@
     }
     .member-info-box{
         display: flex;
-        justify-content: space-between;
+        align-items: center;
         padding: 30px;
+        .info-coin{
+            text-align: center;
+        }
+        .info-img{
+            flex: none;
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+            overflow: hidden;
+            margin-right: 15px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .info-item{
+            display: flex;
+            align-items: center;
+            color: $default-white;
+            font-size: 16px;
+            &.info-name, &.info-coin{
+                font-size: 18px;
+                font-weight: 700;
+            }
+            &.info-coin{
+                justify-content: center;
+            }
+            img{
+                margin-right: 3px;
+            }
+        }
+    }
+}
+
+.member-item-group{
+    position: relative;
+    background-color: $default-white;
+    .member-item-bg{
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f4246a+0,ffffff+100&1+0,0+100 */
+        background: -moz-linear-gradient(top,  rgba(244,36,106,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(244,36,106,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(244,36,106,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4246a', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+
+    }
+    .member-item-list{
+        position: relative;
+        z-index: 50;
+        padding: 0 15px;
+        background-color: $default-white;
+        box-shadow: 0px 1px 4px rgba(174, 165, 165, 0.5);
+        border-radius: 10px;
+        .member-items{
+            display: flex;
+            &:first-child{
+                border-bottom: 1px #eee solid;
+            }
+            .member-item{
+                flex: 1;
+                text-align: center;
+                padding: 15px;
+            }
+            .img-box{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+// 我的帳戶
+.my-list-box{
+    p{
+        padding: 2px 15px;
+        box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.15);
+        background-color: #F8F8F8;
+    }
+    ul{
+        &.my-language{
+            li{
+                flex-direction: column;
+                align-items: flex-start;
+                .item{
+                    &:last-child{
+                        color: $gray-color;
+                    }
+                }
+            }
+        }
+        li{
+            color: $blue-dark;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px $gray-light solid;
+        }
     }
 }
