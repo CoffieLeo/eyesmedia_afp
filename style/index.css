@@ -255,6 +255,10 @@ a:hover, a:focus, a:visited {
   color: #fff;
 }
 
+.outline-btn {
+  border-width: 1px;
+}
+
 footer {
   position: fixed;
   width: 101%;

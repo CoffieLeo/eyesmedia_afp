@@ -170,11 +170,30 @@
     }
     .upload-box{
         position: relative;
-        .add-btn{
+        .add-btn, .change-btn{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+        .change-btn{
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $default-white;
+            background-color: #F4246A;
+            border-radius: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,.5);
+        }
+    }
+    .passport-status{
+        margin-top: 3px;
+        color: $gray-color;
+        .material-icons{
+            font-size: 18px;
+            vertical-align: sub;
         }
     }
 }
@@ -190,6 +209,43 @@
     }
     .img-box{
         margin: auto;
+    }
+}
+
+// 照片確認
+.passport-pic{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(0,0,0,.5);
+    padding: 30px;
+    .passport-box{
+        width: 100%;
+        height: 60%;
+        background-color: $default-white;
+    }
+}
+.passport-pic-status{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: $blue-dark;
+    background-color: $default-white;
+    .btn-group{
+        margin-top: auto;
+        .btn{
+            margin: 0 5px;
+            border-radius: 30px !important;
+        }
+        .outline-btn{
+            border-color: #F4246A;
+            color: #F4246A;
+        }
     }
 }
 
