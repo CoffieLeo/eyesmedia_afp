@@ -1,36 +1,45 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional');
 
-body, html{ 
+body,
+html {
     height: 100%;
     box-sizing: border-box;
     background-color: $default-white;
     // font-family: 'Noto Sans TC', sans-serif;
 }
-body{
-    overflow-x: hidden; 
+
+body {
+    overflow-x: hidden;
 }
 
-a{
-    &:hover, &:focus, &:visited{
+a {
+
+    &:hover,
+    &:focus,
+    &:visited {
         text-decoration: none;
     }
 }
+
 // 電腦版顯示
-.for-pc{
-    @media screen and (max-width: 767px){
+.for-pc {
+    @media screen and (max-width: 767px) {
         display: none;
     }
 }
+
 // 手機版顯示
-.for-mobile{
+.for-mobile {
     display: none;
-    @media screen and (max-width: 767px){
+
+    @media screen and (max-width: 767px) {
         display: block;
     }
 }
 
-.overlay{
+// 全站遮罩
+.overlay {
     position: absolute;
     left: 0;
     right: 0;
@@ -38,12 +47,13 @@ a{
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.53);
+    background-color: rgba(0, 0, 0, .53);
     z-index: 500;
     display: none;
 }
 
-.popup-box{
+// 彈跳視窗
+.popup-box {
     width: 100%;
     max-width: 70%;
     position: absolute;
@@ -55,11 +65,13 @@ a{
     border-radius: 10px;
     z-index: 700;
     display: none;
-    small{
+
+    small {
         display: block;
     }
-    .default-btn{
-        &.btn-sm{
+
+    .default-btn {
+        &.btn-sm {
             width: 50%;
         }
     }
@@ -69,53 +81,75 @@ a{
 //     overflow-x: hidden;
 // }
 
-.form-control{
+.form-control {
     box-shadow: none;
 }
 
-.title-box{
+// 上方標題 & 控制列
+.title-box {
     display: flex;
+    align-items: center;
     padding: 15px;
-    .item{
+
+    .item {
         min-width: 30px;
         text-align: center;
-        &.icon-btn{
-            .material-icons{
+
+        &.icon-btn {
+            .material-icons {
                 font-size: 30px;
             }
         }
+
+        &.ctrl-btn {
+            color: $blue-dark;
+        }
     }
-    .title-name{
+
+    .title-name {
         font-size: 18px;
         font-weight: 700;
         margin: auto;
     }
 }
 
-.nav-tabs{
-    .nav-item{
+.nav-tabs {
+    .nav-item {
         margin-bottom: 0;
     }
-    .nav-link{
+
+    .nav-link {
         border: none;
         border-radius: 0;
-        color: $explore-default;
-        &.active{
+        color: $blue-dark;
+
+        &.active {
             border: none;
             color: #4A90E2;
         }
     }
 }
 
-.offer{
+// ticket material-icons 轉向
+.offer {
     transform: scaleX(-1);
 }
 
+// 自動置右
 .auto-left {
     margin-left: auto;
 }
 
-.default-btn{
+// 全站 btn
+.btn {
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px $default-white solid;
+}
+
+.default-btn {
     width: 100%;
     color: $default-white;
     background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
@@ -126,7 +160,26 @@ a{
     outline: none;
 }
 
-footer{
+.disabled-btn {
+    background-color: #DDDDDF;
+    color: $default-white;
+}
+
+.cancel-btn {
+    width: 100%;
+    color: $default-black;
+    background: $default-white;
+    margin-top: 15px;
+    box-shadow: inset 0 0px 0px 1px $default-black;
+}
+
+.next-btn {
+    background-color: #F4246A;
+    color: $default-white;
+}
+
+// 共用 footer
+footer {
     position: fixed;
     width: 101%;
     left: 50%;
@@ -138,7 +191,8 @@ footer{
     bottom: 0;
     z-index: 300;
     background-color: $default-white;
-    .menu-bar{
+
+    .menu-bar {
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -146,34 +200,42 @@ footer{
         border-bottom: none;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        .bar-item{
+
+        .bar-item {
             flex: 1;
             text-align: center;
             padding: 5px;
             font-size: 13px;
             color: #7C7C7C;
-            img{
+
+            img {
                 width: 50%;
                 margin: auto;
                 display: block;
-                &.default-img{
+
+                &.default-img {
                     display: block;
                 }
-                &.active-img{
+
+                &.active-img {
                     display: none;
                 }
             }
-            &.active{
+
+            &.active {
                 color: $blue-dark;
-                .default-img{
+
+                .default-img {
                     display: none;
                 }
-                .active-img{
+
+                .active-img {
                     display: block;
                 }
             }
-            &.customer-item{
-                img{
+
+            &.customer-item {
+                img {
                     width: 80%;
                     margin-top: -20px;
                 }

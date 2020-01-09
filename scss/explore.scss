@@ -71,7 +71,7 @@ body {
         .filter-item {
             flex: 1;
             text-align: center;
-            color: $explore-default;
+            color: $blue-dark;
 
             &.active {
                 color: #48a2de;
@@ -150,7 +150,7 @@ body {
     }
 
     .store-tab-box {
-        color: $explore-default;
+        color: $blue-dark;
 
         .nav-tabs {
             display: flex;
@@ -384,7 +384,7 @@ body {
     display: flex;
     padding: 15px;
     border-bottom: 1px #eee solid;
-    color: $explore-default;
+    color: $blue-dark;
 
     // &:last-child{
     //     border-bottom: none;

@@ -18,19 +18,6 @@
         .info-coin{
             text-align: center;
         }
-        .info-img{
-            flex: none;
-            width: 75px;
-            height: 75px;
-            border-radius: 100%;
-            overflow: hidden;
-            margin-right: 15px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
         .info-item{
             display: flex;
             align-items: center;
@@ -47,6 +34,20 @@
                 margin-right: 3px;
             }
         }
+    }
+}
+
+.info-img{
+    flex: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 15px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -83,6 +84,10 @@
                 flex: 1;
                 text-align: center;
                 padding: 15px;
+                color: #333;
+                p{
+                    font-size: 14px;
+                }
             }
             .img-box{
                 margin-bottom: 5px;
@@ -93,6 +98,25 @@
 
 // 我的帳戶
 .my-list-box{
+    &.edit-list{
+        ul{
+            li{
+                border-bottom: none;
+                .item{
+                    &:first-child{
+                        flex: 1;
+                    }
+                    &:last-child{
+                        flex: none;
+                        width: 30px;
+                        .material-icons{
+                            color: $gray-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
     p{
         padding: 2px 15px;
         box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.15);
@@ -116,6 +140,88 @@
             align-items: center;
             padding: 15px;
             border-bottom: 1px $gray-light solid;
+            .input-box{
+                flex: 1;
+                input{
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px $gray-light solid;
+                    text-align: right;
+                    color: $blue-dark;
+                }
+            }
         }
+    }
+}
+
+// 我的帳戶 - 檔案
+.my-info-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 15px;
+    border-top: 1px $gray-light solid;
+    border-bottom: 1px $gray-light solid;
+    .info-email{
+        margin-top: 5px;
+        color: $blue-dark;
+        font-size: 15px;
+    }
+    .upload-box{
+        position: relative;
+        .add-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// 上傳護照提示
+.upload-passport-noti{
+    height: calc(100vh - 54px);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+    .noti-text{
+        color: $blue-dark;
+    }
+    .img-box{
+        margin: auto;
+    }
+}
+
+.overlay{
+    display: block;
+}
+
+.overlay-choice{
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 600;
+    .choice-list, .choice-status{
+        background-color: $default-white;
+        border-radius: 12px;
+    }
+    .choice-list{
+        margin-bottom: 15px;
+        li{
+            padding: 10px 15px;
+            border-bottom: 1px $gray-light solid;
+            font-weight: 600;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    .choice-status{
+        padding: 10px 15px;
+        font-weight: 600;
+        text-align: center;
+        color: #4A90E2;
     }
 }

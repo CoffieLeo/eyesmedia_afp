@@ -90,7 +90,8 @@ i {
   vertical-align: middle;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -166,6 +167,9 @@ a:hover, a:focus, a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px;
 }
 
@@ -176,6 +180,10 @@ a:hover, a:focus, a:visited {
 
 .title-box .item.icon-btn .material-icons {
   font-size: 30px;
+}
+
+.title-box .item.ctrl-btn {
+  color: #182B56;
 }
 
 .title-box .title-name {
@@ -208,6 +216,14 @@ a:hover, a:focus, a:visited {
   margin-left: auto;
 }
 
+.btn {
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px #fff solid;
+}
+
 .default-btn {
   width: 100%;
   color: #fff;
@@ -218,6 +234,25 @@ a:hover, a:focus, a:visited {
   font-size: 18px;
   margin-top: 15px;
   outline: none;
+}
+
+.disabled-btn {
+  background-color: #DDDDDF;
+  color: #fff;
+}
+
+.cancel-btn {
+  width: 100%;
+  color: #333;
+  background: #fff;
+  margin-top: 15px;
+  -webkit-box-shadow: inset 0 0px 0px 1px #333;
+          box-shadow: inset 0 0px 0px 1px #333;
+}
+
+.next-btn {
+  background-color: #F4246A;
+  color: #fff;
 }
 
 footer {

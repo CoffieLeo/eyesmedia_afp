@@ -90,7 +90,8 @@ i {
   vertical-align: middle;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -166,6 +167,9 @@ a:hover, a:focus, a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px;
 }
 
@@ -176,6 +180,10 @@ a:hover, a:focus, a:visited {
 
 .title-box .item.icon-btn .material-icons {
   font-size: 30px;
+}
+
+.title-box .item.ctrl-btn {
+  color: #182B56;
 }
 
 .title-box .title-name {
@@ -208,6 +216,14 @@ a:hover, a:focus, a:visited {
   margin-left: auto;
 }
 
+.btn {
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px #fff solid;
+}
+
 .default-btn {
   width: 100%;
   color: #fff;
@@ -218,6 +234,25 @@ a:hover, a:focus, a:visited {
   font-size: 18px;
   margin-top: 15px;
   outline: none;
+}
+
+.disabled-btn {
+  background-color: #DDDDDF;
+  color: #fff;
+}
+
+.cancel-btn {
+  width: 100%;
+  color: #333;
+  background: #fff;
+  margin-top: 15px;
+  -webkit-box-shadow: inset 0 0px 0px 1px #333;
+          box-shadow: inset 0 0px 0px 1px #333;
+}
+
+.next-btn {
+  background-color: #F4246A;
+  color: #fff;
 }
 
 footer {
@@ -311,24 +346,6 @@ footer .menu-bar .bar-item.customer-item img {
   text-align: center;
 }
 
-.member-top-box .member-info-box .info-img {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 75px;
-  height: 75px;
-  border-radius: 100%;
-  overflow: hidden;
-  margin-right: 15px;
-}
-
-.member-top-box .member-info-box .info-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .member-top-box .member-info-box .info-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,6 +370,24 @@ footer .menu-bar .bar-item.customer-item img {
 
 .member-top-box .member-info-box .info-item img {
   margin-right: 3px;
+}
+
+.info-img {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.info-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .member-item-group {
@@ -402,10 +437,36 @@ footer .menu-bar .bar-item.customer-item img {
           flex: 1;
   text-align: center;
   padding: 15px;
+  color: #333;
+}
+
+.member-item-group .member-item-list .member-items .member-item p {
+  font-size: 14px;
 }
 
 .member-item-group .member-item-list .member-items .img-box {
   margin-bottom: 5px;
+}
+
+.my-list-box.edit-list ul li {
+  border-bottom: none;
+}
+
+.my-list-box.edit-list ul li .item:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.my-list-box.edit-list ul li .item:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 30px;
+}
+
+.my-list-box.edit-list ul li .item:last-child .material-icons {
+  color: #8E8E93;
 }
 
 .my-list-box p {
@@ -439,4 +500,113 @@ footer .menu-bar .bar-item.customer-item img {
           align-items: center;
   padding: 15px;
   border-bottom: 1px #eee solid;
+}
+
+.my-list-box ul li .input-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.my-list-box ul li .input-box input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px #eee solid;
+  text-align: right;
+  color: #182B56;
+}
+
+.my-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 15px;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+}
+
+.my-info-box .info-email {
+  margin-top: 5px;
+  color: #182B56;
+  font-size: 15px;
+}
+
+.my-info-box .upload-box {
+  position: relative;
+}
+
+.my-info-box .upload-box .add-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.upload-passport-noti {
+  height: calc(100vh - 54px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 15px;
+}
+
+.upload-passport-noti .noti-text {
+  color: #182B56;
+}
+
+.upload-passport-noti .img-box {
+  margin: auto;
+}
+
+.overlay {
+  display: block;
+}
+
+.overlay-choice {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  z-index: 600;
+}
+
+.overlay-choice .choice-list, .overlay-choice .choice-status {
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.overlay-choice .choice-list {
+  margin-bottom: 15px;
+}
+
+.overlay-choice .choice-list li {
+  padding: 10px 15px;
+  border-bottom: 1px #eee solid;
+  font-weight: 600;
+}
+
+.overlay-choice .choice-list li:last-child {
+  border-bottom: none;
+}
+
+.overlay-choice .choice-status {
+  padding: 10px 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #4A90E2;
 }
