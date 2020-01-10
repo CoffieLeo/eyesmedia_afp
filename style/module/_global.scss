@@ -38,6 +38,14 @@ a {
     }
 }
 
+.container{
+    @media screen and (max-width: 767px){
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
 // 全站遮罩
 .overlay {
     position: absolute;
