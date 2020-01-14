@@ -194,10 +194,28 @@ a:hover, a:focus, a:visited {
   color: #182B56;
 }
 
+.title-box .item.del-btn {
+  color: #C10E24;
+}
+
 .title-box .title-name {
   font-size: 18px;
   font-weight: 700;
   margin: auto;
+}
+
+.setting-default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  color: #182B56;
+  margin-top: 15px;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
 }
 
 .nav-tabs .nav-item {
@@ -265,6 +283,75 @@ a:hover, a:focus, a:visited {
 
 .outline-btn {
   border-width: 1px;
+}
+
+.md-checkbox {
+  position: relative;
+  text-align: left;
+}
+
+.md-checkbox label {
+  cursor: pointer;
+  display: inline;
+  line-height: 1.25em;
+  vertical-align: top;
+  clear: both;
+  padding-left: 1px;
+}
+
+.md-checkbox label:not(:empty) {
+  padding-left: 0.75em;
+}
+
+.md-checkbox label:before, .md-checkbox label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.md-checkbox label:before {
+  width: 1.25em;
+  height: 1.25em;
+  background: #fff;
+  border: 1px solid #8E8E93;
+  border-radius: 0.125em;
+  cursor: pointer;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.md-checkbox input[type="checkbox"] {
+  outline: 0;
+  visibility: hidden;
+  width: 1.25em;
+  margin: 0;
+  display: block;
+  float: left;
+  font-size: inherit;
+}
+
+.md-checkbox input[type="checkbox"]:checked + label:before {
+  background: #F4246A;
+  border: none;
+}
+
+.md-checkbox input[type="checkbox"]:checked + label:after {
+  -webkit-transform: translate(0.25em, 0.33654em) rotate(-45deg);
+          transform: translate(0.25em, 0.33654em) rotate(-45deg);
+  width: 0.75em;
+  height: 0.375em;
+  border: 0.125em solid #fff;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+.md-checkbox input[type="checkbox"]:disabled:checked + label:before {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.md-checkbox input[type="checkbox"]:disabled + label:before {
+  border-color: rgba(0, 0, 0, 0.26);
 }
 
 footer {
@@ -696,4 +783,195 @@ footer .menu-bar .bar-item.customer-item img {
   font-weight: 600;
   text-align: center;
   color: #4A90E2;
+}
+
+.my-address-list ul li {
+  padding: 15px;
+  border-bottom: 1px #eee solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-address-list ul li:first-child {
+  border-top: 1px #eee solid;
+}
+
+.my-address-list ul li .item.default-item p {
+  font-size: 14px;
+  color: #F4246A;
+}
+
+.my-address-list ul li p {
+  color: #182B56;
+}
+
+.my-address-list ul li p.tel {
+  font-size: 14px;
+}
+
+.my-address-list ul li p.small {
+  color: #8E8E93;
+}
+
+.my-address-list ul li p small {
+  margin-left: 5px;
+  color: #8E8E93;
+}
+
+.my-address-list ul li input {
+  text-align: right;
+}
+
+.my-address-list .add-address-btn {
+  text-align: center;
+  padding: 15px;
+  color: #182B56;
+  cursor: pointer;
+}
+
+.my-address-list .material-icons {
+  font-size: 18px;
+  vertical-align: sub;
+}
+
+.my-creditcard-list .main-list {
+  border-top: 1px #eee solid;
+  color: #182B56;
+}
+
+.my-creditcard-list .main-list > li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+  color: #182B56;
+}
+
+.my-creditcard-list .main-list > li a.collapsed .material-icons {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.my-creditcard-list .main-list > li .item-img, .my-creditcard-list .main-list > li .item-icon {
+  width: 32px;
+  margin-right: 15px;
+}
+
+.my-creditcard-list .main-list > li .item-img img, .my-creditcard-list .main-list > li .item-icon img {
+  vertical-align: sub;
+}
+
+.my-creditcard-list .main-list > li .item-icon {
+  width: 26px;
+  height: 26px;
+  border: 1px #ccc dotted;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.my-creditcard-list .main-list > li .item-icon .material-icons {
+  font-size: 18px;
+  vertical-align: text-top;
+}
+
+.my-creditcard-list .main-list > li .card-type {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.my-creditcard-list .main-list > li .item-card-num {
+  margin-right: 10px;
+}
+
+.my-creditcard-list .main-list > li .item-default {
+  min-width: 40px;
+  color: #F4246A;
+  font-size: 14px;
+}
+
+.my-creditcard-list .main-list > li .sub-list {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  padding-left: 55px;
+}
+
+.my-creditcard-list .main-list > li .sub-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 15px 15px 0;
+  border-top: 1px #eee solid;
+}
+
+.my-creditcard-list .main-list > li .sub-list li:last-child {
+  border-bottom: 1px #eee solid;
+}
+
+.my-creditcard-info {
+  padding: 30px 0;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+}
+
+.my-creditcard-info .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.my-creditcard-info label {
+  color: #273D52;
+  margin-bottom: 5px;
+}
+
+.my-creditcard-info input {
+  border-radius: 10px;
+}
+
+.my-creditcard-info .setting-default {
+  border: none;
+}
+
+.neweb-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.neweb-pay img {
+  margin: 20px 0;
+}
+
+.fixed-btn {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
 }
