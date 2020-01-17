@@ -134,6 +134,16 @@
                 }
             }
         }
+        &.social-account{
+            .item-img{
+                width: 35px;
+                height: 35px;
+                margin-right: 10px;
+            }
+            .auto-left{
+                color: #F4246A;
+            }
+        }
         li{
             color: $blue-dark;
             display: flex;
@@ -152,6 +162,7 @@
             }
         }
     }
+
 }
 
 // 我的帳戶 - 檔案
@@ -384,15 +395,28 @@
                 padding-left: 55px;
                 li{
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                     padding: 15px 15px 15px 0;
                     border-top: 1px $gray-light solid;
                     &:last-child{
                         border-bottom: 1px $gray-light solid;
                     }
+                    .item-dates{
+                        flex: none;
+                        width: 100%;
+                        display: flex;
+                        .item-date{
+                            flex: 1;
+                            padding-left: 45px;
+                        }
+                    }
                 }
             }
         }
+    }
+    .setting-default{
+        margin-top: 0;
     }
 }
 
@@ -436,4 +460,49 @@
     padding: 15px;
     background-color: $default-white;
     box-shadow: 0 -5px 8px rgba(0,0,0,.2);
+}
+
+// 變更密碼
+.change-password-list{
+    padding: 35px 15px 0;
+    border-top: 1px $gray-light solid;
+    ul{
+        padding: 0 15px;
+        margin-bottom: 60px;
+        li{
+            margin-bottom: 30px;
+            position: relative;
+            &.is-open{
+                .material-icons{
+                    &.visibility{
+                        display: none;
+                    }
+                    &.visibility-off{
+                        display: block;;
+                    }
+                }
+            }
+            input{
+                width: 100%;
+                border: none;
+                border-bottom: 1px $gray-light solid;
+            }
+            .text-muted{
+                position: absolute;
+                top: 100%;
+                color: #FF3B30 !important;
+            }
+            .material-icons{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgba(24, 43, 86, 0.5);
+                &.visibility-off{
+                    display: none;
+                }
+            }
+        }
+    }
+    .next-btn{}
 }
