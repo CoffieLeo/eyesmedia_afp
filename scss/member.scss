@@ -37,6 +37,155 @@
     }
 }
 
+.member-tab{
+    .nav-tabs{
+        border-top: 1px #eee solid;
+        border-bottom: none;
+        padding: 15px;
+        justify-content: center;
+        li{
+            flex: 1;
+            text-align: center;
+            a{
+                position: relative;
+                color: $default-black;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: -3px;
+                    right: -3px;
+                    bottom: -10px;
+                    height: 3px;
+                    background-color: #F4246A;
+                    display: none;
+                }
+                &.active{
+                    color: #F4246A;
+                    &:after{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .input-box{
+        display: flex;
+        padding: 3px 10px;
+        border-radius: 5px;
+        border: 1px $gray-light solid;
+        .material-icons{
+            color: $gray-color;
+        }
+        input{
+            width: 100%;
+        }
+    }
+    .choice-filter-box{
+        width: 100%;
+        display: flex;
+        padding: 15px;
+        border-top: 1px $gray-light solid;
+        border-bottom: 1px $gray-light solid;
+        margin-top: 10px;
+        .drop-down-box{
+            width: 100%;
+            display: flex;
+        }
+        .filter-box{
+            padding-left: 15px;
+            position: relative;
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                top: 50%;
+                left: 7px;
+                background-color: $gray-light;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .discount-card{
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,.3);
+        margin-top: 15px;
+        &.not-use{
+            .card-top{
+                .item-btn{
+                    color: $gray-color;
+                    border-color: $gray-light;
+                }
+            }
+            .card-bottom{
+                .item-distance{
+                    display: none;
+                }
+            }
+        }
+        .card-top{
+            display: flex;
+            padding: 15px;
+            .item-img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: none;
+                width: 100px;
+                padding: 5px;
+                border: 1px $gray-light solid;
+                img{
+                    width: 100%;
+                }
+            }
+            .item-info{
+                flex: 1;
+                margin: 0 10px;
+                .info-title{
+                    color: $blue-dark;
+                    font-weight: 600;
+                }
+                .info-sub-title{
+                    color: $default-black;
+                }
+                .info-date, .info-status{
+                    font-size: 13px;
+                    color: $blue-dark;
+                }
+            }
+            .item-btn{
+                display: flex;
+                text-align: center;
+                color: #22C2D3;
+                border: 2px #22C2D3 solid;
+                padding: 3px 15px;
+                border-radius: 100px;
+                align-self: center;
+            }
+        }
+        .card-bottom{
+            display: flex;
+            padding: 5px 15px;
+            align-items: center;
+            background: rgba(34, 194, 211, 0.1);
+            font-size: 13px;
+            .item-type{
+                flex: none;
+                display: flex;
+                width: 100px;
+                padding: 5px;
+                align-items: center;
+            }
+            .item-info{
+                flex: 1;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
 .info-img{
     flex: none;
     width: 75px;
@@ -505,4 +654,38 @@
         }
     }
     .next-btn{}
+}
+
+#favorite-travel{
+    li{
+        &.info-name{
+            font-size: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+        }
+        &.info-near{
+            .material-icons{
+                font-size: 18px;
+                vertical-align: sub;
+                color: #22C2D3;
+            }
+            span{
+                color: $gray-color;
+            }
+            .auto-left{
+                color: #22C2D3;
+                font-size: 15px;
+            }
+        }
+    }
+    .item-tag{
+        margin: 5px 5px 5px 0;
+        margin-right: 5px;
+        color: #22C2D3;
+        border-color: #22C2D3;
+    }
 }
