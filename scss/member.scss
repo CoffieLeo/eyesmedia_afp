@@ -689,3 +689,33 @@
         border-color: #22C2D3;
     }
 }
+
+#favorite-good{
+    li{
+        &.info-price{
+            .item{
+                display: flex;
+                align-items: center;
+                .new-price{
+                    color: #FF3B30;
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+                .old-price{
+                    color: $gray-color;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
+
+.info-province{
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: auto;
+    align-self: flex-start;
+    border: 2px $blue-dark solid;
+    border-radius: 5px;
+    font-size: 18px;
+}
